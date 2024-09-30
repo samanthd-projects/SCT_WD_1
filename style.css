@@ -1,0 +1,164 @@
+/* General reset */
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: montserrat;
+}
+
+/* Fixed Navbar Section */
+nav {
+  background: #0082e6;
+  height: 80px;
+  width: 100%;
+  position: fixed; /* Fix the navbar */
+  top: 0;          /* Align it to the top */
+  z-index: 1000;  /* Keep it above other elements */
+}
+
+label.logo {
+  color: white;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
+}
+
+nav ul {
+  float: right;
+  margin-right: 20px;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+
+nav ul li a {
+  color: white;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+nav ul li a:hover {
+  background-color: #1b9bff;
+  color: white;
+  transition: 0.3s;
+}
+
+a.active {
+  background: #1b9bff;
+  transition: 0.5s;
+}
+
+.checkbtn {
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+@media (max-width: 952px) {
+  label.logo {
+    font-size: 30px;
+    padding-left: 50px;
+  }
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 858px) {
+  .checkbtn {
+    display: block;
+  }
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #2c3e50;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+  }
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a {
+    font-size: 20px;
+  }
+  a:hover, a.active {
+    background: none;
+    color: #00ff95;
+  }
+  #check:checked ~ ul {
+    left: 0;
+  }
+}
+
+/* Main Section Styling */
+.main-content {
+  text-align: center;
+  padding: 50px 20px;
+  background: #f4f4f4;
+  margin-top: 80px; /* Added margin to account for fixed navbar */
+}
+
+h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+p {
+  font-size: 20px;
+  color: #555;
+}
+
+.button-container {
+  margin: 20px 0;
+}
+
+.action-btn {
+  padding: 10px 20px;
+  font-size: 18px;
+  color: white;
+  background-color: #0082e6;
+  border: none;
+  border-radius: 5px;
+  margin: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.action-btn:hover {
+  background-color: #00ff62;
+  transform: scale(1.05); 
+}
+
+.main-image {
+  width: 80%;
+  height: auto;
+  margin-top: 30px;
+  opacity: 0;
+  transition: opacity 1.5s ease;
+}
